@@ -2,30 +2,161 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Página Web</title>
+    <title>Pastelería Dulce Encanto</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+            background-color: #FFF0F5;
+            color: #444;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #FFD1DC;
+            padding: 20px;
             text-align: center;
-            padding: 50px;
         }
-        button {
-            padding: 10px 20px;
+
+        header img {
+            width: 100px;
+            height: auto;
+        }
+
+        h1 {
+            color: #A0522D;
+        }
+
+        section {
+            padding: 20px;
+            background-color: #FAF0E6;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #DB7093;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #FFF8DC;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, select, textarea, button {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             font-size: 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
         }
+
+        button {
+            background-color: #FFB6C1;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
         button:hover {
-            background-color: #0056b3;
+            background-color: #FF69B4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #FFE4E1;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <h1>¡Hola Mundo!</h1>
-    <p>Esta es una página web sencilla creada con HTML.</p>
-    <button onclick="alert('¡Has hecho clic en el botón!')">Haz clic aquí</button>
+
+<header>
+    <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Logo Pastel">
+    <h1>Pastelería Dulce Encanto</h1>
+</header>
+
+<section>
+    <h2>Sabores de Pasteles</h2>
+    <ul>
+        <li>Chocolate</li>
+        <li>Vainilla</li>
+        <li>Fresa</li>
+        <li>Zanahoria</li>
+        <li>Red Velvet</li>
+        <li>Limón</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Reservaciones</h2>
+    <form>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="fecha">Fecha de la reservación:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <label for="pastel">Tipo de pastel:</label>
+        <select id="pastel" name="pastel">
+            <option>Chocolate</option>
+            <option>Vainilla</option>
+            <option>Fresa</option>
+            <option>Zanahoria</option>
+            <option>Red Velvet</option>
+        </select>
+
+        <label for="mensaje">Mensaje adicional:</label>
+        <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+
+        <button type="submit">Reservar</button>
+    </form>
+</section>
+
+<section>
+    <h2>Encuesta para nuestros clientes</h2>
+    <form>
+        <label>¿Qué tan satisfecho estás con nuestros pasteles?</label>
+        <select>
+            <option>Muy satisfecho</option>
+            <option>Satisfecho</option>
+            <option>Regular</option>
+            <option>No satisfecho</option>
+        </select>
+
+        <label>¿Nos recomendarías?</label>
+        <select>
+            <option>Sí</option>
+            <option>Tal vez</option>
+            <option>No</option>
+        </select>
+
+        <label>Comentarios:</label>
+        <textarea rows="3" placeholder="Escribe aquí tus sugerencias o comentarios..."></textarea>
+
+        <button type="submit">Enviar Encuesta</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 Pastelería Dulce Encanto. Todos los derechos reservados.
+</footer>
+
 </body>
 </html>
